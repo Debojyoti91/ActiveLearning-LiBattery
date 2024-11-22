@@ -1,22 +1,70 @@
-# ActiveLearning-LiBattery
+# Lithium-Ion Battery Property Prediction Using GNN and Active Learning
 
 ## Project Overview
 
-This project focuses on modeling lithium battery performance using advanced machine learning techniques, including Graph Neural Networks (GNNs), SHAP analysis, and active learning strategies. The project is structured as a complete machine learning pipeline, starting from data processing and exploratory data analysis (EDA) to model training, interpretation, and fine-tuning. The goal is to leverage these techniques to better understand and predict the behavior of lithium-ion batteries.
+This project focuses on predicting lithium-ion battery properties using advanced machine learning techniques, including **Graph Neural Networks (GNNs)**, **SHAP analysis**, and **active learning strategies**. The pipeline is structured to provide robust predictions, interpret model behavior, and enhance performance using minimal data via active learning.
+
+## Project Contents
+
+- `src/`: Source code for the project, including data processing, GNN modeling, SHAP analysis, and active learning.
+  - `data_preparation.py`: Handles loading, preprocessing, and saving of data.
+  - `model_definition.py`: Defines the GNN model architecture and graph representation.
+  - `train.py`: Implements the training loop for the GNN and active learning strategies.
+  - `evaluate.py`: Evaluates the trained model and generates visualizations.
+  - `shap_analysis.py`: Conducts SHAP-based feature importance analysis.
+- `notebooks/`: Google Colab notebooks are provided in the **notebook** folder for direct and accurate implementation of these models.
+
 
 ## Features
 
-- Implementation of Graph Neural Networks (GNNs) for lithium battery performance modeling.
-- SHAP analysis for model interpretability and feature importance.
-- Active learning strategies to improve model performance with minimal data.
-- Fine-tuning of models based on active learning results.
+- **Graph Neural Network (GNN) Modeling**:
+  - Predicts key properties:
+    - **Electronic Energy**
+    - **Total Enthalpy**
+    - **Total Entropy**
+    - **Free Energy**
+    - **Vibration Frequencies**
+  - **molecular graph representations as input**.
+  
+- **Active Learning Framework**:
+  - Implements strategies to select the most informative data points:
+    - **Maximum Expected Improvement (MEI)**
+    - **Maximum Uncertainty (MU)**
 
-## Data
+- **SHAP Analysis**:
+  - Provides interpretability by explaining feature contributions to model predictions.
+  
+- **Validation Dataset**:
+  - Evaluates model performance on independent datasets for better generalization.
 
-The project utilizes the Lithium-Ion Battery Electrolyte (LIBE) dataset, which contains comprehensive data related to the properties and performance of lithium-ion battery electrolytes. This dataset is critical for training and evaluating the machine learning models developed in this project.
+- **Visualization**:
+  - Plots for actual vs. predicted values.
+  - Training and validation learning curves.
+  - SHAP-based feature importance visualizations.
+
+## Processed Data (Utilized for this study)
+
+This project uses the **Lithium-Ion Battery (LIB)** Electrolyte datasets, containing detailed properties of lithium-ion battery electrolytes. These are the final, processed datasets, adapted from the original datasets for training and evaluating the models developed in this project.
+
+**Dataset Link**: [LIBE Dataset](https://drive.google.com/drive/folders/1-gLGgO4IJUV73uG8xS2VqtipaGXenuTV?usp=sharing)
+
+## Tools and Technologies
+
+- **Python 3.8+**: Core programming language.
+- **PyTorch & PyTorch Geometric**: For GNN modeling.
+- **SHAP**: For feature importance analysis and interpretability.
+- **Matplotlib & Seaborn**: For data visualization.
+- **Scikit-learn**: For metrics and preprocessing.
+- **Pandas & NumPy**: For data manipulation and numerical operations.
+- **Google Colab**: For Computation on GPU
+
+## Original Datasets
+
+The project utilizes the Lithium-Ion Battery Electrolyte (LIBE) dataset and MPcules dataset, which contains comprehensive data related to the properties and performance of lithium-ion battery electrolytes. 
 
 **Citation:**  
-Spotte-Smith, Evan Walter Clark; Blau, Samuel M.; Xie, Xiaowei; Patel, Hetal; Wood, Brandon; Dwaraknath, Shyam; et al. (2021). Lithium-Ion Battery Electrolyte (LIBE) dataset. figshare. Dataset. [https://doi.org/10.6084/m9.figshare.14226464.v2](https://doi.org/10.6084/m9.figshare.14226464.v2)
+1. Spotte-Smith, Evan Walter Clark; Blau, Samuel M.; Xie, Xiaowei; Patel, Hetal; Wood, Brandon; Dwaraknath, Shyam; et al. (2021). Lithium-Ion Battery Electrolyte (LIBE) dataset. figshare. Dataset. [https://doi.org/10.6084/m9.figshare.14226464.v2](https://doi.org/10.6084/m9.figshare.14226464.v2)
+2. Spotte-Smith, E. W. C.; Cohen, O. A.; Blau, S. M.; Munro, J. M.; Yang, R.; Guha, R. D.; Patel, H. D.; Vijay, S.; Huck, P.; Kingsbury, R.; et al. A database of molecular properties integrated in the Materials Project. Digital Discovery 2023, 2 (6), 1862-1882, 
 
 ## Tools and Technologies
 
@@ -29,54 +77,41 @@ Spotte-Smith, Evan Walter Clark; Blau, Samuel M.; Xie, Xiaowei; Patel, Hetal; Wo
 - **pymatgen**: For materials science data manipulation.
 - **SHAP**: For explainable AI and model interpretability.
 
-## Project Contents
+## Dependencies and Installation 
 
-- `src/`: Source code for the project, including data processing, EDA, GNN modeling, SHAP analysis, and active learning.
-  - `data_processing.py`: Handles loading, preprocessing, and saving of data.
-  - `eda.py`: Contains scripts for exploratory data analysis, including missing value analysis, distribution plots, and correlation heatmaps.
-  - `gnn_model.py`: Defines the GNN model, training routines, and data preparation functions.
-  - `shap_analysis.py`: Implements SHAP analysis for model interpretation.
-  - `active_learning/`: Contains scripts for active learning with and without weighted loss functions.
-  - `fine_tuning.py`: Handles fine-tuning of the model using active learning and plotting the results.
-  - `utils.py`: Utility functions for parsing and processing data.
-  - `main.py`: The central script that orchestrates the entire pipeline, from data processing to model training and evaluation.
-- `data/`: Contains the dataset used in the project.
-  - `raw/`: Stores the raw LIBE dataset.
-  - `processed/`: Stores processed datasets.
-- `results/`: Contains results such as model outputs, SHAP values, and active learning results.
-- `reports/`: Contains figures, plots, and summaries generated during the project.
-  - `figures/`: Stores visualizations such as distribution plots, correlation heatmaps, and SHAP summary plots.
-  - `summary.md`: A summary of the project findings and results.
-- `environment.yml`: Specifies the Python environment and dependencies for easy setup.
-- `README.md`: Provides an overview of the project, installation instructions, and usage guidelines.
-- `LICENSE`: The license under which the project is distributed.
-- `.gitignore`: Specifies files and directories to be ignored by Git.
+Before running the code, install the following Python libraries:
 
-## Installation
+pip install torch
+pip install shap==0.46.0
+pip install scikit-learn==1.5.2
+pip install matplotlib
+pip install seaborn
+pip install pandas
+pip install numpy
+pip install pymatgen
+pip install matminer==0.9.3
+pip install torch-geometric==2.6.1
 
-1. Clone the repository:
 
-   ```bash
-   git clone https://github.com/Debojyoti91/ActiveLearning-LiBattery.git
-   cd ActiveLearning-LiBattery
+## Project Structure
 
-## Installation and Usage
+```plaintext
+LIBE/
+├── README.md                  # Documentation (this file)
+├── notebooks/
+│   ├── GNN_Training.ipynb     # Jupyter notebook for step-by-step training
+├── src/
+│   ├── data_preparation.py    # Data preprocessing and graph creation
+│   ├── model_definition.py    # GNN model definition
+│   ├── train.py               # Training and active learning
+│   ├── evaluate.py            # Evaluation metrics and result visualization
+│   ├── shap_analysis.py       # SHAP feature importance analysis
+├── results/
+│   ├── models/                # Trained models saved here
+│   ├── plots/                 # Generated plots saved here
+├── LICENSE                    # BSD-2-Clause License
+└── .gitignore                 # Git ignore file
 
-```bash
-# Clone the repository:
-git clone https://github.com/Debojyoti91/ActiveLearning-LiBattery.git
-cd ActiveLearning-LiBattery
 
-# Create and activate the environment:
-conda env create -f environment.yml
-conda activate li_battery_modeling
 
-# Download and place the dataset:
-# Download the LIBE dataset as described above and place it in the data/raw/ directory.
-
-# To run the entire modeling pipeline:
-python main.py
-
-# To run the pipeline with the active learning strategy using weighted loss:
-python main.py --use_weighted_loss
 
