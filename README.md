@@ -66,30 +66,20 @@ The project utilizes the Lithium-Ion Battery Electrolyte (LIBE) dataset and MPcu
 - **pymatgen**: For materials science data manipulation.
 - **SHAP**: For explainable AI and model interpretability.
 
-## Project Contents
+## Dependencies and Installation 
 
-- `src/`: Source code for the project, including data processing, EDA, GNN modeling, SHAP analysis, and active learning.
-  - `data_processing.py`: Handles loading, preprocessing, and saving of data.
-  - `eda.py`: Contains scripts for exploratory data analysis, including missing value analysis, distribution plots, and correlation heatmaps.
-  - `gnn_model.py`: Defines the GNN model, training routines, and data preparation functions.
-  - `shap_analysis.py`: Implements SHAP analysis for model interpretation.
-  - `active_learning/`: Contains scripts for active learning with and without weighted loss functions.
-  - `fine_tuning.py`: Handles fine-tuning of the model using active learning and plotting the results.
-  - `utils.py`: Utility functions for parsing and processing data.
-  - `main.py`: The central script that orchestrates the entire pipeline, from data processing to model training and evaluation.
-- `data/`: Contains the dataset used in the project.
-  - `raw/`: Stores the raw LIBE dataset.
-  - `processed/`: Stores processed datasets.
-- `results/`: Contains results such as model outputs, SHAP values, and active learning results.
-- `reports/`: Contains figures, plots, and summaries generated during the project.
-  - `figures/`: Stores visualizations such as distribution plots, correlation heatmaps, and SHAP summary plots.
-  - `summary.md`: A summary of the project findings and results.
-- `environment.yml`: Specifies the Python environment and dependencies for easy setup.
-- `README.md`: Provides an overview of the project, installation instructions, and usage guidelines.
-- `LICENSE`: The license under which the project is distributed.
-- `.gitignore`: Specifies files and directories to be ignored by Git.
+Before running the code, install the following Python libraries:
 
-
+pip install torch
+pip install shap==0.46.0
+pip install scikit-learn==1.5.2
+pip install matplotlib
+pip install seaborn
+pip install pandas
+pip install numpy
+pip install pymatgen
+pip install matminer==0.9.3
+pip install torch-geometric==2.6.1
 
 
 ## Project Structure
