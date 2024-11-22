@@ -1,22 +1,76 @@
-# ActiveLearning-LiBattery
+# Lithium-Ion Battery Property Prediction Using GNN and Active Learning
 
 ## Project Overview
 
-This project focuses on modeling lithium battery performance using advanced machine learning techniques, including Graph Neural Networks (GNNs), SHAP analysis, and active learning strategies. The project is structured as a complete machine learning pipeline, starting from data processing and exploratory data analysis (EDA) to model training, interpretation, and fine-tuning. The goal is to leverage these techniques to better understand and predict the behavior of lithium-ion batteries.
+This project focuses on predicting lithium-ion battery properties using advanced machine learning techniques, including **Graph Neural Networks (GNNs)**, **SHAP analysis**, and **active learning strategies**. The pipeline is structured to provide robust predictions, interpret model behavior, and enhance performance using minimal data via active learning.
 
 ## Features
 
-- Implementation of Graph Neural Networks (GNNs) for lithium battery performance modeling.
-- SHAP analysis for model interpretability and feature importance.
-- Active learning strategies to improve model performance with minimal data.
-- Fine-tuning of models based on active learning results.
+- **Graph Neural Network (GNN) Modeling**:
+  - Predicts key properties:
+    - **Electronic Energy**
+    - **Total Enthalpy**
+    - **Total Entropy**
+    - **Free Energy**
+    - **Vibration Frequencies**
+  - Utilizes molecular graph representations as input.
+  
+- **Active Learning Framework**:
+  - Implements strategies to select the most informative data points:
+    - **Maximum Expected Improvement (MEI)**
+    - **Maximum Uncertainty (MU)**
+
+- **SHAP Analysis**:
+  - Provides interpretability by explaining feature contributions to model predictions.
+  
+- **Validation Dataset**:
+  - Evaluates model performance on independent datasets for better generalization.
+
+- **Visualization**:
+  - Plots for actual vs. predicted values.
+  - Training and validation learning curves.
+  - SHAP-based feature importance visualizations.
+
+## Preprocessed Data (Used for this study)
+
+This project uses the **Lithium-Ion Battery Electrolyte (LIBE) dataset**, containing detailed properties of lithium-ion battery electrolytes. It is the foundation for training and evaluating the models developed in this project.
+
+**Dataset Link**: [LIBE Dataset](https://drive.google.com/drive/folders/1-gLGgO4IJUV73uG8xS2VqtipaGXenuTV?usp=sharing)
+
+## Tools and Technologies
+
+- **Python 3.8+**: Core programming language.
+- **PyTorch & PyTorch Geometric**: For GNN modeling.
+- **SHAP**: For feature importance analysis and interpretability.
+- **Matplotlib & Seaborn**: For data visualization.
+- **Scikit-learn**: For metrics and preprocessing.
+- **Pandas & NumPy**: For data manipulation and numerical operations.
+
+## Project Structure
+
+```plaintext
+LIBE/
+├── README.md                  # Documentation (this file)
+├── notebooks/
+│   ├── GNN_Training.ipynb     # Jupyter notebook for step-by-step training
+├── src/
+│   ├── data_preparation.py    # Data preprocessing and graph creation
+│   ├── model_definition.py    # GNN model definition
+│   ├── train.py               # Training and active learning
+│   ├── evaluate.py            # Evaluation metrics and result visualization
+│   ├── shap_analysis.py       # SHAP feature importance analysis
+├── results/
+│   ├── models/                # Trained models saved here
+│   ├── plots/                 # Generated plots saved here
+├── LICENSE                    # BSD-2-Clause License
+└── .gitignore                 # Git ignore file
 
 ## Data
 
 The project utilizes the Lithium-Ion Battery Electrolyte (LIBE) dataset, which contains comprehensive data related to the properties and performance of lithium-ion battery electrolytes. This dataset is critical for training and evaluating the machine learning models developed in this project.
 
 **Citation:**  
-Spotte-Smith, Evan Walter Clark; Blau, Samuel M.; Xie, Xiaowei; Patel, Hetal; Wood, Brandon; Dwaraknath, Shyam; et al. (2021). Lithium-Ion Battery Electrolyte (LIBE) dataset. figshare. Dataset. [https://doi.org/10.6084/m9.figshare.14226464.v2](https://doi.org/10.6084/m9.figshare.14226464.v2)
+1. Spotte-Smith, Evan Walter Clark; Blau, Samuel M.; Xie, Xiaowei; Patel, Hetal; Wood, Brandon; Dwaraknath, Shyam; et al. (2021). Lithium-Ion Battery Electrolyte (LIBE) dataset. figshare. Dataset. [https://doi.org/10.6084/m9.figshare.14226464.v2](https://doi.org/10.6084/m9.figshare.14226464.v2)
 
 ## Tools and Technologies
 
