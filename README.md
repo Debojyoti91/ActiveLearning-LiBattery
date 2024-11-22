@@ -4,6 +4,17 @@
 
 This project focuses on predicting lithium-ion battery properties using advanced machine learning techniques, including **Graph Neural Networks (GNNs)**, **SHAP analysis**, and **active learning strategies**. The pipeline is structured to provide robust predictions, interpret model behavior, and enhance performance using minimal data via active learning.
 
+## Project Contents
+
+- `src/`: Source code for the project, including data processing, GNN modeling, SHAP analysis, and active learning.
+  - `data_preparation.py`: Handles loading, preprocessing, and saving of data.
+  - `model_definition.py`: Defines the GNN model architecture and graph representation.
+  - `train.py`: Implements the training loop for the GNN and active learning strategies.
+  - `evaluate.py`: Evaluates the trained model and generates visualizations.
+  - `shap_analysis.py`: Conducts SHAP-based feature importance analysis.
+- `notebooks/`: Google Colab notebooks are provided in the **notebook** folder for direct and accurate implementation of these models.
+
+
 ## Features
 
 - **Graph Neural Network (GNN) Modeling**:
@@ -13,7 +24,7 @@ This project focuses on predicting lithium-ion battery properties using advanced
     - **Total Entropy**
     - **Free Energy**
     - **Vibration Frequencies**
-  - Utilizes molecular graph representations as input.
+  - **molecular graph representations as input**.
   
 - **Active Learning Framework**:
   - Implements strategies to select the most informative data points:
