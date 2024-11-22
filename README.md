@@ -45,7 +45,7 @@ This project uses the **Lithium-Ion Battery (LIB)** Electrolyte datasets, contai
 - **Matplotlib & Seaborn**: For data visualization.
 - **Scikit-learn**: For metrics and preprocessing.
 - **Pandas & NumPy**: For data manipulation and numerical operations.
-- ** Google Colab** For Computation on GPU
+- **Google Colab** For Computation on GPU
 
 ## Original Datasets
 
