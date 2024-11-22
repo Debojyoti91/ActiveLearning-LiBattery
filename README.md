@@ -33,7 +33,7 @@ This project focuses on predicting lithium-ion battery properties using advanced
 
 ## Processed Data (Utilized for this study)
 
-This project uses the **Lithium-Ion Battery Electrolyte (LIBE) datasets**, containing detailed properties of lithium-ion battery electrolytes. These are the final, processed datasets, adapted from the original datasets for training and evaluating the models developed in this project.
+This project uses the **Lithium-Ion Battery (LIB)** Electrolyte datasets, containing detailed properties of lithium-ion battery electrolytes. These are the final, processed datasets, adapted from the original datasets for training and evaluating the models developed in this project.
 
 **Dataset Link**: [LIBE Dataset](https://drive.google.com/drive/folders/1-gLGgO4IJUV73uG8xS2VqtipaGXenuTV?usp=sharing)
 
