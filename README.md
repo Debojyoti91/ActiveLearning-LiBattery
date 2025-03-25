@@ -14,6 +14,13 @@ This project focuses on predicting lithium-ion battery properties using advanced
   - `shap_analysis.py`: Conducts SHAP-based feature importance analysis.
 - `notebooks/`: Google Colab notebooks are provided in the **notebook** folder for direct and accurate implementation of these models.
 
+**Cite this work:** 
+
+If you use this repository, codes in your research or work, please cite the following publication:
+
+Das, D. and Chakraborty, D. (2025). *Machine Learning Prediction of Physicochemical Properties in Lithium-Ion Battery Electrolytes With Active Learning Applied to Graph Neural Networks*. Journal of Computational Chemistry, 46: e70009.  
+https://doi.org/10.1002/jcc.70009
+
 
 ## Features
 
@@ -113,12 +120,7 @@ LIBE/
 └── .gitignore                 # Git ignore file
 
 
-**Cite this work:** 
 
-If you use this repository, code, or dataset in your research or work, please cite the following publication:
-
-Das, D. and Chakraborty, D. (2025). *Machine Learning Prediction of Physicochemical Properties in Lithium-Ion Battery Electrolytes With Active Learning Applied to Graph Neural Networks*. Journal of Computational Chemistry, 46: e70009.  
-https://doi.org/10.1002/jcc.70009
 
 
 
